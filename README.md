@@ -115,6 +115,16 @@ From the repository root:
 
 These scripts are the supported entry points for curriculum, practice, and simulator modes.
 
+By default, each start script now saves the assistant's session output to a timestamped Markdown file in `sessions/`.
+
+To create a progress log for a session:
+
+```bash
+./scripts/new_session_log.sh practice sliding_window medium "Longest Substring Without Repeating Characters"
+```
+
+This creates a timestamped Markdown file in `sessions/` that matches the repository's learning and memory schema.
+
 ## How to Use with Codex CLI
 
 In Codex CLI, a practical loop is:
@@ -137,6 +147,7 @@ Major folders:
 - `problem-bank/`: pattern-oriented problem references (e.g., sliding window, hash maps, dynamic programming)
 - `shared/`: shared standards and templates (Python guidance, evaluation criteria, session templates)
 - `scripts/`: CLI entry scripts for curriculum, practice, and simulator starts
+  - `scripts/new_session_log.sh`: create a structured session log in `sessions/`
 
 ## Current Non-Goals
 
